@@ -14,7 +14,7 @@ const Tab = ({ tab, isFilterTab, isActiveTab, handleClick }) => {
     return (
         <div
             key={tab.name} 
-            className={`tab-btn ${isFilterTab ? 'w-10 h-10 rounded-full glassmorphism' : 'w-12 h-12 rounded-4'}`}
+            className={`tab-btn transition-all duration-300 border-2 hover:border-black hover:shadow-md ${isFilterTab ? 'w-10 h-10 rounded-full glassmorphism' : 'w-12 h-12 rounded-4'}`}
             onMouseDown={handleClick}
         >
             <img 

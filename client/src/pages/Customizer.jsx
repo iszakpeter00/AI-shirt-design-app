@@ -84,9 +84,7 @@ const Customizer = () => {
 
         state[decalType.stateProperty] = res;
 
-        if (!activeFilterTab[decalType.filterTab]) {
-            handleActiveFilterTab(decalType.filterTab);
-        }
+        type === "Logo" ? state.isLogoTexture = true : state.isFullTexture = true;
     }
 
     const handleActiveFilterTab = (tab) => {
@@ -271,7 +269,7 @@ const Customizer = () => {
                         
                         {/* Download button */}
                         <button 
-                            className='flex flex-row gap-3 items-center glassmorphism p-4 rounded-full'
+                            className='flex flex-row gap-3 items-center glassmorphism px-6 py-3 rounded-lg transition-all duration-300 border-2 hover:border-black cursor-pointer'
                             onClick={downloadCanvasToImage}
                         >
                             <span className='font-semibold'>Download</span>
